@@ -36,4 +36,4 @@ RUN . /home/gitpod/.nix-profile/etc/profile.d/nix.sh \
   && direnv hook bash >> /home/gitpod/.bashrc
 
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-RUN nvm install node
+RUN . $HOME/.nvm/nvm.sh && nvm install node
